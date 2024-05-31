@@ -2,6 +2,7 @@ import { Bingo } from '../components/Bingo/Bingo'
 import { useClientStore } from '../store/clientStore'
 import { useSocket } from '../hooks/useSocket'
 import { useVerifyWinner } from '../hooks/useVerifyWinner'
+import { Link } from 'react-router-dom'
 
 export function HomePage({ socket }) {
 	const { onChangeUsername } = useClientStore()
@@ -14,6 +15,9 @@ export function HomePage({ socket }) {
 
 	return (
 		<section className="home-page">
+			<Link to="/admin">
+				<button>Go to Admin</button>
+			</Link>
 			<h1>Bingo</h1>
 			<h2>
 				{inputDisabled && !checkWinner

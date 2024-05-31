@@ -5,6 +5,7 @@ import { useSocket } from '../hooks/useSocket'
 import { useBingoGame } from '../hooks/useBingoGame'
 import { useState } from 'react'
 import { BINGO_ADMIN_KEY } from '../config'
+import { Link } from 'react-router-dom'
 
 export function AdminPage({ socket }) {
 	const [credentials, setCredentials] = useState('')
@@ -18,6 +19,9 @@ export function AdminPage({ socket }) {
 
 	return (
 		<section className="admin-page">
+			<Link to="/">
+				<button>Go to Home</button>
+			</Link>
 			<h1>Admin</h1>
 			<input
 				type="password"
