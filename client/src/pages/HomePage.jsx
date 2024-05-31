@@ -16,7 +16,7 @@ export function HomePage({ socket }) {
 	return (
 		<section className="home-page">
 			<Link to="/admin">
-				<button>Go to Admin</button>
+				<button disabled={inputDisabled}>Go to Admin</button>
 			</Link>
 			<h1>Bingo</h1>
 			<h2>

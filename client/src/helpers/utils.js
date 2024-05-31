@@ -1,5 +1,5 @@
 export const verifyWinner = (winner_phrases, formInputs) => {
-	if (!winner_phrases || !formInputs) return
+	if (!winner_phrases || !formInputs || !Array.isArray(winner_phrases)) return
 	return Object.values(formInputs).every((element) =>
 		winner_phrases.includes(element)
 	)
