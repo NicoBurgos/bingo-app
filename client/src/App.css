@@ -1,0 +1,174 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.home-page {
+	width: 900px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	flex-wrap: wrap;
+	min-width: 360px;
+}
+
+.bingo-form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+	gap: 10px;
+}
+
+.error-msg {
+	color: rgb(238, 54, 54);
+	font-size: 20px;
+}
+
+.bingo-input,
+.username-input,
+.credentials-input {
+	width: 100%;
+	text-transform: capitalize;
+	height: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #fefefe;
+	color: black;
+	border: 2px solid #000;
+	border-radius: 10px;
+	outline: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	overflow-wrap: break-word;
+}
+
+.bingo-button {
+	grid-column: span 2;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	box-shadow: none;
+}
+
+.admin-page {
+	width: 900px;
+}
+
+.credentials-input {
+	max-width: 300px;
+	margin: 50px auto;
+}
+
+.admin-controls {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	gap: 100px;
+}
+
+.admin-controls :first-child {
+	background-color: darkgreen;
+}
+
+.admin-controls :nth-child(2) {
+	background-color: darkred;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	text-transform: capitalize;
+	gap: 10px;
+}
+
+.list-item {
+	background-color: darkgrey;
+	margin-left: -40px;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 2px solid lightgray;
+}
+
+.checkbox-input {
+	transform: scale(2);
+}
+
+.winners-container {
+	margin: auto;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+}
+
+.winner {
+	margin-left: -40px;
+	background-color: darkgoldenrod;
+	border: 2px solid wheat;
+	padding: 5px 10px;
+}
+
+@media (max-width: 1000px) {
+	#root {
+		display: flex;
+		padding: 0 auto;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.home-page,
+	.admin-page {
+		width: 100%;
+	}
+}
+
+@media (max-width: 900px) {
+	.home-page {
+		min-width: 320px;
+	}
+
+	.bingo-form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		min-width: 320px;
+	}
+
+	.bingo-input {
+		width: 100%;
+	}
+}
+
+@media (max-width: 720px) {
+	#root {
+		padding: 0 20px;
+	}
+}
+
+@media (max-width: 550px) {
+	.admin-page {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.winners-container {
+		width: 100%;
+	}
+}
+
+@media (max-width: 400px) {
+	#root {
+		padding: 0 5px;
+	}
+}
